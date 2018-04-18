@@ -1,0 +1,48 @@
+.NewTruckForm {
+  margin: 6rem auto;
+  width: 50%;
+  background-color: rgba(113, 113, 255, 0.25);
+  padding: 0.5rem 1rem;
+}
+
+.NewTruckForm .input-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.NewTruckForm .input-area input {
+  margin: 0.5rem 1rem;
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+}
+
+.NewTruckForm .input-area input:focus,
+.NewTruckForm .input-area input:active {
+  outline: none;
+}
+
+.NewTruckForm .input-area label {
+  width: 3rem;
+}
+
+.NewTruckForm input[type="submit"] {
+  background-color: #4ffc4f;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.NewTruckForm input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.NewTruckForm input[type="submit"]:focus,
+.NewTruckForm input[type="submit"]:active {
+  outline: none;
+}

@@ -1,0 +1,17 @@
+.TruckApp nav {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: darkblue;
+}
+
+.TruckApp nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.TruckApp nav a:hover {
+  text-decoration: underline;
+}

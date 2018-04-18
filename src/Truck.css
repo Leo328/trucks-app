@@ -1,0 +1,13 @@
+.Truck {
+  width: 30%;
+  margin-left: 2rem;
+}
+
+.Truck h1,
+.Truck p {
+  text-align: center;
+}
+
+.Truck img {
+  width: 100%;
+}
