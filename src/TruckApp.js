@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
+import { Route, Link, Switch, Redirect } from "react-router-dom";
 import "./TruckApp.css";
 import TruckList from "./TruckList";
 import NewTruckForm from "./NewTruckForm";
@@ -38,19 +38,26 @@ class TruckApp extends Component {
           <Link to="/new">New Truck</Link>
           <Link to="/">All Trucks</Link>
         </nav>
-        <Route
-          path="/"
-          exact
-          component={props => (
-            <TruckList truckData={this.state.trucks} {...props} />
-          )}
-        />
-        <Route
-          path="/new"
-          component={props => (
-            <NewTruckForm handleAdd={this.handleAdd} {...props} />
-          )}
-        />
+        <Switch>
+          <Route
+            path="/new"
+            component={routeProps => (
+              <NewTruckForm handleAdd={this.handleAdd} {...routeProps} />
+            )}
+          />
+          <Route
+            path="/"
+            exact
+            component={routeProps => (
+              <TruckList truckData={this.state.trucks} {...routeProps} />
+            )}
+          />
+          {/* Option 1: 404 if no matching path found */}
+          {/* <Route component={() => <div>404, not a valid url!!!</div>} /> */}
+
+          {/* Option 2: Redirect to TruckList */}
+          <Redirect to="/" />
+        </Switch>
       </div>
     );
   }
