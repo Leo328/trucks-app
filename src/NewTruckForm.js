@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "./NewTruckForm.css";
 
 class NewTruckForm extends Component {
@@ -21,6 +22,8 @@ class NewTruckForm extends Component {
     e.preventDefault();
     this.props.handleAdd(this.state);
     this.setState({ type: "", src: "", rating: "" });
+    // perform a redirect to "/"
+    this.props.history.push("/");
   }
 
   render() {
@@ -66,4 +69,4 @@ class NewTruckForm extends Component {
   }
 }
 
-export default NewTruckForm;
+export default withRouter(NewTruckForm);

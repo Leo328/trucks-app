@@ -41,14 +41,12 @@ class TruckApp extends Component {
         <Switch>
           <Route
             path="/new"
-            component={routeProps => (
-              <NewTruckForm handleAdd={this.handleAdd} {...routeProps} />
-            )}
+            render={routeProps => <NewTruckForm handleAdd={this.handleAdd} />}
           />
           <Route
             path="/"
             exact
-            component={routeProps => (
+            render={routeProps => (
               <TruckList truckData={this.state.trucks} {...routeProps} />
             )}
           />
